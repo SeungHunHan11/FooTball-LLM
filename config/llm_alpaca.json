@@ -1,0 +1,8 @@
+{
+    "model_name": "KoAlpaca",
+    "model_path": "beomi/KoAlpaca-Polyglot-5.8B",
+    "temperature": 0.7, 
+    "top_p": 0.9,
+    "do_sample": false,
+    "max_length": 512
+}

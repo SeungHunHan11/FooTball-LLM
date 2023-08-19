@@ -1,0 +1,19 @@
+transformers==4.28.0
+accelerate==0.18.0
+streamlit
+openai
+faiss-cpu # faiss-gpu
+protobuf==3.20.3
+sentencepiece
+accelerate
+git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf
+rank_bm25
+
+konlpy
+
+mecab-python
+mecab-ko
+farm-haystack
+
+# bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+

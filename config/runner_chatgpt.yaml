@@ -1,0 +1,16 @@
+Model_config:
+  llm_configs: ./config/llm_chatgpt_SH.json
+  device: cuda:0
+
+Retriever_config:
+  retrieve_mode: sparse
+  data_dir: ./json_data
+  Retriever_pt: ./2050iter_model.pt
+  cutoff: 2000
+  top_k: 3
+  if_extract: False
+  extract_window: 500
+  extract_step: 500
+  index_dir: ./index_save_dir/sparse/bm25_index.pickle
+  
+output_dir: ./output

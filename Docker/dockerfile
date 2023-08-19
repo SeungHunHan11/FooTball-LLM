@@ -1,0 +1,15 @@
+FROM nvcr.io/nvidia/pytorch:21.11-py3
+
+RUN sed -i 's@archive.ubuntu.com@mirror.kakao.com@g' /etc/apt/sources.list
+
+RUN apt-get update
+RUN apt-get update && apt-get upgrade -y && apt-get install -y vim && apt-get install -y git
+RUN apt-get install -y g++ && apt-get install -y curl
+RUN apt-get install -y tmux
+
+# requirements
+RUN pip install --upgrade pip
+RUN pip install matplotlib seaborn scikit-learn scipy pandas numpy jupyter wandb==0.12.18 einops
+
+RUN apt-get install -y fonts-nanum
+RUN rm -rf ~/.cache/matplotlib/*
