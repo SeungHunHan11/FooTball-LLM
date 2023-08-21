@@ -7,7 +7,7 @@ Retriever_config:
   data_dir: ./json_data
   Retriever_pt: ./2050iter_model.pt
   cutoff: 2000
-  top_k: 3
+  top_k: 5
   if_extract: False
   extract_window: 500
   extract_step: 500
