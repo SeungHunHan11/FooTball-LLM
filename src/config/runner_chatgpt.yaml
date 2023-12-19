@@ -1,0 +1,18 @@
+#model_name: "gpt-3.5-turbo"
+model_name: "gpt-4"
+
+query_refine_dir: "./prompts/GPT/query_refine.txt"
+confidence_dir: "./prompts/GPT/confidence_check.txt"
+default_dir: "./prompts/GPT/default_prompt.txt"
+strategy_ext_dir: "./prompts/GPT/default_prompt.txt"
+answer_dir : "./prompts/GPT/answer_generation_nocheck.txt"
+
+data_dir: "../json_data_new"
+
+content_type: "All"
+
+top_k: 1
+check_point_dir: "./2050iter_model.pt"
+index_save_dir: "./index_save_dir/sparse"
+retrieve_mode: "sparse"
+

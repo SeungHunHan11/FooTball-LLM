@@ -1,0 +1,75 @@
+﻿ChatGPT-3.5,ChatGPT-3.5 +FT-LLM (News),ChatGPT-3.5 +FT-LLM(News+wiki),ChatGPT-3.5 +FT-LLM(News+Confidence),ChatGPT- 4.0,ChatGPT- 4.0 + FT-LLM(News)
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence: 4,Coherence: 1,Coherence: 2,Coherence: 5,Coherence: 4
+Reasoning: 5,Reasoning: 4,Reasoning: 5,Reasoning: 2,Reasoning: 4,Reasoning: 5
+Interestingness: 4,Interestingness: 5 ,Interestingness: 4,Interestingness: 3,Interestingness: 3,Interestingness: 5
+,,,,,
+Factuality: 1,Factuality: 1,Factuality: 3,Factuality: 1,Factuality: 1,Factuality: 5
+Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 5
+Reasoning: 1,Reasoning: 1,Reasoning: 1,Reasoning: 1,Reasoning: 1,Reasoning: 5
+Interestingness: 1,Interestingness: 1,Interestingness: 1,Interestingness: 1,Interestingness: 1,Interestingness: 4
+,,,,,
+Factuality: 4,Factuality: 5,Factuality: 5,Factuality: 4,Factuality: 5,Factuality: 5
+Coherence: 5,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 5,Coherence: 4
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 4,Interestingness: 4,Interestingness: 3,Interestingness: 4,Interestingness: 5,Interestingness: 3
+,,,,,
+Factuality: 5,Factuality: 4,Factuality: 4,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 5,Coherence: 4,Coherence: 4,Coherence: 3,Coherence: 5,Coherence: 5
+Reasoning: 5,Reasoning: 4,Reasoning: 4,Reasoning: 3,Reasoning: 5,Reasoning: 5
+Interestingness: 4,Interestingness: 3,Interestingness: 3,Interestingness: 3,Interestingness: 5,Interestingness: 4
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 2
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 4,Reasoning: 5,Reasoning: 3
+Interestingness: 4,Interestingness: 5,Interestingness: 5,Interestingness: 3,Interestingness: 5,Interestingness: 2
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 5,Coherence: 4,Coherence: 4,Coherence: 5,Coherence: 5,Coherence: 4
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 5,Interestingness: 5,Interestingness: 5,Interestingness: 4,Interestingness: 5,Interestingness: 4
+,,,,,
+Factuality: 2,Factuality: 2,Factuality: 2,Factuality: 2,Factuality: 3,Factuality: 5
+Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 1,Coherence: 5
+Reasoning: 4,Reasoning: 3,Reasoning: 3,Reasoning: 2,Reasoning: 2,Reasoning: 5
+Interestingness: 2,Interestingness: 2,Interestingness: 2,Interestingness: 1,Interestingness: 1,Interestingness: 5
+,,,,,
+Factuality: 2,Factuality: 4,Factuality: 5,Factuality: 5,Factuality: 3,Factuality: 5
+Coherence: 2,Coherence: 2,Coherence: 4,Coherence: 3,Coherence: 2,Coherence: 4
+Reasoning: 2,Reasoning: 4,Reasoning: 5,Reasoning: 3,Reasoning: 2,Reasoning: 5
+Interestingness: 1,Interestingness: 3,Interestingness: 5,Interestingness: 2,Interestingness: 1,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 5
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 4,Interestingness: 4,Interestingness:4,Interestingness: 4,Interestingness: 4,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 5,Coherence: 5
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 4,Interestingness: 5,Interestingness: 4,Interestingness: 4,Interestingness: 5,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 5
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 4,Interestingness: 4,Interestingness: 4,Interestingness: 4,Interestingness: 4,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 4,Factuality: 5
+Coherence: 4,Coherence: 3,Coherence: 3,Coherence: 4,Coherence: 2,Coherence: 5
+Reasoning: 3,Reasoning: 4,Reasoning: 4,Reasoning: 4,Reasoning: 3,Reasoning: 5
+Interestingness: 2,Interestingness: 4,Interestingness: 4,Interestingness: 3,Interestingness: 1,Interestingness:4
+,,,,,
+Factuality: 5,Factuality: 4,Factuality: 4,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence: 3,Coherence: 3,Coherence: 4,Coherence: 4,Coherence: 5
+Reasoning: 4,Reasoning: 3,Reasoning: 3,Reasoning: 5,Reasoning: 4,Reasoning: 5
+Interestingness: 3,Interestingness: 2,Interestingness: 2,Interestingness:4,Interestingness: 3,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4
+Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness:3,Interestingness: 4,Interestingness: 4,Interestingness: 4,Interestingness: 5,Interestingness: 5
+,,,,,
+Factuality: 5,Factuality: 1,Factuality: 5,Factuality: 5,Factuality: 5,Factuality: 5
+Coherence: 4,Coherence:1,Coherence: 4,Coherence: 4,Coherence: 4,Coherence: 4
+Reasoning: 5,Reasoning: 1,Reasoning: 5,Reasoning: 5,Reasoning: 5,Reasoning: 5
+Interestingness: 3,Interestingness: 1,Interestingness: 3,Interestingness: 3,Interestingness: 5,Interestingness: 5

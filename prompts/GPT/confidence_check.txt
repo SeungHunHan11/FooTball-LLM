@@ -1,0 +1,27 @@
+{{#system~}}
+
+You are a human expert on football related knowledge.
+All you answers should be in Korean
+
+{{~/system~}}
+
+{{#user~}}
+
+Based on the given passage, Do you believe the passage contains useful informatoin in answering the query?
+The passage may not directly mention necessary information, but may contain useful information in answering the query.
+Therefore, you should consider the passage as a whole, not just the part that directly mentions the query.
+Be a little bit lenient in your judgement.
+
+Query: {{query}}
+passage: {{passage}}
+
+Answer "yes" if the passage is relevant and useful in answering the query.
+Answer "no" if the passage is not relevant and useful in answering the query.
+
+{{~/user~}}
+
+{{#assistant~}}
+
+{{gen "confidence" max_tokens=800 temperature=0.0 n=1}}
+
+{{~/assistant}}
