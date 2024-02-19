@@ -2,10 +2,6 @@ import torch
 
 import torch
 import torch.nn as nn
-<<<<<<< HEAD
-=======
-from transformers import BertModel
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
 from copy import deepcopy
 from transformers import AutoModel, AutoTokenizer
 from rank_bm25 import BM25Okapi
@@ -24,10 +20,7 @@ from rank_bm25 import BM25Okapi
 from konlpy.tag import Mecab
 
 import numpy as np
-<<<<<<< HEAD
 import pandas as pd
-=======
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
 
 class KobertBiEncoder(torch.nn.Module):
     def __init__(self):
@@ -61,11 +54,7 @@ class KobertBiEncoder(torch.nn.Module):
 
 class Index_Builder:
     
-<<<<<<< HEAD
     def __init__(self, 
-=======
-    def __init__(self, model, tokenizer, 
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
                  sparse_tokenizer,
                  data_dir, 
                  index_save_dir, use_content_type = 'All', 
@@ -73,17 +62,9 @@ class Index_Builder:
         
         assert retrieve_mode in ['dense', 'sparse'], "retrieve_mode should be either 'dense' or 'sparse'"
         
-<<<<<<< HEAD
         #os.makedirs(index_save_dir, exist_ok = True)
 
         self.retrieve_mode = retrieve_mode
-=======
-        os.makedirs(index_save_dir, exist_ok = True)
-
-        self.model = model
-        self.retrieve_mode = retrieve_mode
-        self.tokenizer = tokenizer
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
         self.sparse_tokenizer = sparse_tokenizer
         self.data_dir = data_dir
         self.index_save_dir = index_save_dir
@@ -102,16 +83,8 @@ class Index_Builder:
                 except:
                     pass
                     #self.doc_content.append(item['title'] + item['content'])
-<<<<<<< HEAD
         
         if retrieve_mode == 'sparse':
-=======
-            
-
-        if retrieve_mode != 'sparse':
-            self.doc_loader = self.load_data(batch_size)
-        else:
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
             # corpus = []
             # doc_id_ref = []
             # #tokenizer = Mecab()
@@ -125,10 +98,6 @@ class Index_Builder:
                 
             # self.corpus = corpus
             # self.doc_id_ref = doc_id_ref
-<<<<<<< HEAD
-=======
-            
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
             # load corpus pickle
             with open('/Project/src/index_save_dir/sparse/corpus.pkl', 'rb') as f:
                 self.corpus = pickle.load(f)
@@ -154,18 +123,13 @@ class Index_Builder:
         
         return self.doc_loader
         
-<<<<<<< HEAD
     def build_dense_index(self, data_dir):
-=======
-    def build_dense_index(self, batch_size):
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
         """
         Building dense retrieval index based on faiss.
 
         Firstly, use model to conver contents in json files to embeddings. 
         Then, build faiss index based on embeddings.
         """
-<<<<<<< HEAD
 
         os.makedirs(self.index_save_dir, exist_ok = True)
         faiss_save_path = os.path.join(self.index_save_dir, "ada_embedding.faiss")
@@ -202,36 +166,6 @@ class Index_Builder:
         self.dense_index = index
         
         return df, index
-=======
-        dense_index_path = os.path.join(self.index_save_dir, "dense")
-        os.makedirs(dense_index_path, exist_ok = True)
-        faiss_save_path = os.path.join(dense_index_path, "faiss.index")
-        
-        print("Start converting documents to vectors...")
-
-        doc_loader = self.doc_loader
-        
-        doc_embedding = []
-        for batch in tqdm(doc_loader):
-            batch = tuple(t.cuda() for t in batch)
-            with torch.no_grad():
-                output = self.model(input_ids = batch[0], attention_mask = batch[1], type = 'passage')
-            doc_embedding.append(output)
-        doc_embedding = torch.cat(doc_embedding, dim=0)
-        print("Finish converting embeddings.")
-        
-        # Build faiss index by using doc embedding
-        print("Start building faiss index...")
-        hidden_dim = doc_embedding.shape[1]
-        dense_index = faiss.IndexFlatL2(hidden_dim)
-        dense_index.add(doc_embedding.cpu().numpy())
-        faiss.write_index(dense_index,faiss_save_path)
-        print("Finish building index.")
-        
-        self.dense_index = dense_index
-        
-        return dense_index
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
         
     def build_sparse_index(self):
 
@@ -245,7 +179,6 @@ class Index_Builder:
 
         
     def search(self, query, top_k: int = 20, searcher = None):
-<<<<<<< HEAD
         raw_reference_list = []
 
         if self.retrieve_mode == 'dense':
@@ -274,34 +207,6 @@ class Index_Builder:
                 
                 raw_reference_list.append(raw_reference)
                 
-=======
-        
-        if self.retrieve_mode == 'dense':
-                
-            tokenized_text  = self.tokenizer(query, padding = 'max_length', truncation = True,
-                                            max_length = 512, return_tensors = "pt")
-            
-            input_ids = tokenized_text["input_ids"].cuda()
-            attention_mask = tokenized_text["attention_mask"].cuda()
-            
-            with torch.no_grad():
-                query_embed = self.model(input_ids = input_ids, attention_mask = attention_mask, type = 'query')
-            
-            query_embed = query_embed.detach().cpu().numpy()
-            
-            _,doc_id = searcher.search(query_embed, top_k)
-
-            cnt = 0
-            raw_reference_list = []
-            
-            for i,id in enumerate(doc_id[0]):
-                raw_reference = self.all_docs[id]        
-                raw_reference_list.append(raw_reference)
-        
-                cnt += 1
-                if (cnt == top_k) :
-                    break
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
         else:            
             self.query = self.sparse_tokenizer.convert_ids_to_tokens(self.sparse_tokenizer(query,add_special_tokens = False)['input_ids'])
             #tokenizer = Mecab()
@@ -317,20 +222,11 @@ class Index_Builder:
             idx = np.argsort(scores)[::-1]
             top_k_indices = idx[:top_k]
 
-<<<<<<< HEAD
-=======
-            # top_k_list = np.argpartition(scores,-1*top_k)[-1*top_k:]
-            # top_k_indices = np.array(self.doc_id_ref)[top_k_list]    
-                    
-            raw_reference_list = []
-
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
             for idx in top_k_indices:
 
                 raw_reference = self.all_docs[idx]
                 raw_reference_list.append(raw_reference)
 
-<<<<<<< HEAD
         raw_contents = []
 
         for item in raw_reference_list:
@@ -340,10 +236,6 @@ class Index_Builder:
                 raw_contents.append(item['title'] + item['content'])
             
         return raw_reference_list, raw_contents
-=======
-
-        return raw_reference_list
->>>>>>> 8e228dc73cc39899f044884d150e3e627ac5db4b
     
 class TextDataset(torch.utils.data.Dataset):
     def __init__(self, texts, tokenizer, max_length=512):
