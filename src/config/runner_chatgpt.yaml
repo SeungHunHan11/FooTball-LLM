@@ -1,0 +1,12 @@
+model_name: "gpt-4"
+
+data_dir: "../json_data_new"
+embedding_data_dir: "../embedding_data"
+
+content_type: "All"
+
+top_k: 3
+index_save_dir: "/Project/src/index_save_dir/sparse"
+retrieve_mode: "sparse"
+
+use_refine: 'unrefined'

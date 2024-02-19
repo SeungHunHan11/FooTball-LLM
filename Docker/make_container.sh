@@ -1,9 +1,8 @@
-docker build -t shh_exp .
+docker build -t ftllm .
 
-docker run --gpus all -it -h llm \
+docker run --gpus all -it -h ftllm \
         -p 1111:1111 \
         --ipc=host \
-        --name llm \
-        -v /home/seunghun/바탕화면/deploy:/Project \
-        pains bash
+        --name ftllm \
+        ftllm bash
 

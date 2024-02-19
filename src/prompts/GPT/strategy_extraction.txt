@@ -1,0 +1,29 @@
+{{#system~}}
+
+You are a human expert on football related knowledge.
+All you answers should be in Korean
+
+{{~/system~}}
+
+{{~#user}}
+
+You will be given several passage and a query.
+Your job is to generate three step strategy that can be used to extract the most relevant fragment of the passage to the query.
+Each step must refer to specific sentences of the passage.
+You will have to incorporate relevant information from "all" passages in the strategy.
+
+query: {{query}}
+
+{{#each passages}}
+
+passage: {{this}}
+
+{{/each}}
+
+{{~/user}}
+
+{{#assistant~}}
+
+{{gen "strategy" list_append=True temperature=0.0 max_tokens=1500 n=1}}
+
+{{~/assistant}}
